@@ -10,7 +10,7 @@
 var chalk = require('chalk');
 var execSync = require('child_process').execSync;
 var spawn = require('cross-spawn');
-var open = require('open');
+var bopen = require('bopen');
 
 // https://github.com/sindresorhus/open#app
 var OSX_CHROME = 'google chrome';
@@ -125,8 +125,8 @@ function startBrowserProcess(browser, url, args) {
   // Fallback to open
   // (It will always open new tab)
   try {
-    var options = { app: browser, wait: false, url: true };
-    open(url, options).catch(() => {}); // Prevent `unhandledRejection` error.
+    var options = { app: browser, wait: false, url: true, incognito:true };
+    bopen(url, options).catch(() => {}); // Prevent `unhandledRejection` error.
     return true;
   } catch (err) {
     return false;

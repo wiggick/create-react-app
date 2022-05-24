@@ -69,6 +69,7 @@
     "is-root": "^2.1.0",
     "loader-utils": "^3.2.0",
     "open": "^8.4.0",
+    "bopen": "^2.6.0",
     "pkg-up": "^3.1.0",
     "prompts": "^2.4.2",
     "react-error-overlay": "^6.0.11",
